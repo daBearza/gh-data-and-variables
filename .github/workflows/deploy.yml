@@ -31,7 +31,7 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Output information
-        run: echo "MongoDB_username: ${{ env.MONGODB_DB_NAME }}"
+        run: echo "MongoDB_username: $'{{ env.MONGODB_DB_NAME }}'"
 
   deploy:
     needs: test
